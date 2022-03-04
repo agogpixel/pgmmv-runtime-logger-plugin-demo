@@ -30,5 +30,5 @@ jobs:
           ls -al assets
           git config --global user.name 'agogbot'
           git config --global user.email 'agogbot@users.noreply.github.com'
-          git commit --allow-empty -am "[skip ci] Fetch plugin with release tag '${{ github.event.inputs.release-tag }}'."
+          git commit -am "[skip ci] Fetch plugin with release tag '${{ github.event.inputs.release-tag }}'."
           git push
