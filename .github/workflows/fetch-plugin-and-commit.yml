@@ -1,0 +1,33 @@
+name: Fetch Plugin & Commit
+on:
+  workflow_dispatch:
+    inputs:
+      release-tag:
+        description: Plugin release tag.
+        required: false
+        default: 'next'
+env:
+  PRIVATE_REGISTRY_URL: https://npm.pkg.github.com
+  GITHUB_TOKEN: ${{ secrets.GHP_TOKEN }}
+jobs:
+  Fetch-Plugin-And-Commit:
+    name: Fetch Plugin & Commit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Setup Dependencies
+        uses: ./.github/actions/setup-dependencies
+        with:
+          registry-url: ${{ env.PRIVATE_REGISTRY_URL }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GHP_TOKEN }}
+      - name: Fetch Plugin
+        run: npm run fetch-plugin -- '${{ inputs.release-tag }}'
+        shell: bash
+      - name: Commit & Push
+        run: |
+          git config --global user.name 'agogbot'
+          git config --global user.email 'agogbot@users.noreply.github.com'
+          git commit --allow-empty -am "[skip ci] Fetch plugin with release tag '${{ inputs.release-tag }}'."
+          git push

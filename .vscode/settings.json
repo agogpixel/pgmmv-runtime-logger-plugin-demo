@@ -1,0 +1,33 @@
+{
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": false,
+	"[html]": {
+		"editor.formatOnSave": true
+	},
+	"[javascript]": {
+		"editor.formatOnSave": true
+	},
+	"[json]": {
+		"editor.formatOnSave": true
+	},
+	"[jsonc]": {
+		"editor.formatOnSave": true
+	},
+	"[markdown]": {
+		"editor.formatOnSave": true
+	},
+	"[typescript]": {
+		"editor.formatOnSave": true
+	},
+	"[yaml]": {
+		"editor.formatOnSave": true
+	},
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"typescript.tsserver.experimental.enableProjectDiagnostics": false,
+	"yaml.schemas": {
+		"https://json.schemastore.org/github-workflow.json": "file:///d%3A/agogpixel/pgmmv-ts/.github/workflows/build.yml"
+	}
+}

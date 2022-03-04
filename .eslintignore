@@ -1,0 +1,7 @@
+.git/*
+.husky/*
+.vscode/*
+assets/*
+demos/*
+dist/*
+node_modules/*
