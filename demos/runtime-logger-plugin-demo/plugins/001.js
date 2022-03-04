@@ -2,7 +2,7 @@
  * Runtime Logger Plugin for Pixel Game Maker MV.
  * Copyright 2022 AgogPixel - All Rights Reserved.
  * Implemented by kidthales <kidthales@agogpixel.com>
- * Minified code released under CC BY-ND 4.0 license: https://creativecommons.org/licenses/by-nd/4.0/
+ * This file is released under CC BY-ND 4.0 license: https://creativecommons.org/licenses/by-nd/4.0/
  */
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
