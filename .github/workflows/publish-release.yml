@@ -10,6 +10,7 @@ env:
   PRIVATE_REGISTRY_URL: https://npm.pkg.github.com
   GITHUB_TOKEN: ${{ secrets.GHP_TOKEN }}
   ITCH_IO_STAGING_URI: /repos/agogpixel/itch-io-staging/actions/workflows/fetch-pgmmv-plugin-artifacts-and-commit.yml/dispatches
+  ITCH_IO_STAGING_INPUT: '{"ref":"main","inputs":{"payload":"{\"tag\":\"${{ github.ref_name }}\",\"name\":\"pgmmv-runtime-logger-plugin\""}}'
 jobs:
   Build:
     name: Build
@@ -62,5 +63,5 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Update itch.io Staging
-        run: gh api $ITCH_IO_STAGING_URI --input - <<< {"ref":"main","inputs":{"payload":"{\"tag\":\"${GITHUB_REF/refs\/tags\//}\",\"name\":\"pgmmv-runtime-logger-plugin\""}}
+        run: gh api $ITCH_IO_STAGING_URI --input - <<< $ITCH_IO_STAGING_INPUT
         shell: bash
