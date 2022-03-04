@@ -26,8 +26,12 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GHP_TOKEN }}
       - name: Build
         run: npm run build
+        shell: bash
+      - name: Archive Build Artifacts
+        uses: actions/upload-artifact@v2
         with:
-          build-artifacts-name: dist
+          name: dist
+          path: dist
   Prepare-Release:
     name: Prepare Release
     runs-on: ubuntu-latest
