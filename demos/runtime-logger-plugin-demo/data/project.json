@@ -292,6 +292,35 @@
 					},
 					"scenePartList": [
 							{
+			"id": 2,
+			"name": "Starting Point1",
+			"partType": 0,
+			"layerIndex": 0,
+			"locked": false,
+			"visible": true,
+			"priority": 1,
+			"dispPriority": 0,
+
+	"objectId": 99999999,
+	"initialActionId": -1,
+	"initialDisplayDirectionFlag": false,
+	"initialDisplayDirection": 270.000000,
+	"x": 274,
+	"y": 194,
+	"scalingX": 100,
+	"scalingY": 100,
+	"rotation": 0,
+	"courseScenePartId": -1,
+	"courseStartPointId": -1,
+	"startPointPlayerBit": 1,
+	"startPointGroupIndex": 0,
+	"commonActionCommandListObject": {  },
+	"actionCommandListObject": {  },
+	"disappearActionCommandList": [  ]
+,
+			"folder": false
+		},
+							{
 			"id": 1,
 			"name": "Camera",
 			"partType": 2,
@@ -319,35 +348,6 @@
 	"switchQualifierId": -1,
 	"switchId": -1
 }
-,
-			"folder": false
-		},
-							{
-			"id": 2,
-			"name": "Starting Point1",
-			"partType": 0,
-			"layerIndex": 0,
-			"locked": false,
-			"visible": true,
-			"priority": 1,
-			"dispPriority": 0,
-
-	"objectId": 99999999,
-	"initialActionId": -1,
-	"initialDisplayDirectionFlag": false,
-	"initialDisplayDirection": 270.000000,
-	"x": 274,
-	"y": 194,
-	"scalingX": 100,
-	"scalingY": 100,
-	"rotation": 0,
-	"courseScenePartId": -1,
-	"courseStartPointId": -1,
-	"startPointPlayerBit": 1,
-	"startPointGroupIndex": 0,
-	"commonActionCommandListObject": {  },
-	"actionCommandListObject": {  },
-	"disappearActionCommandList": [  ]
 ,
 			"folder": false
 		}
@@ -895,7 +895,7 @@
 	"inputConditionList": [  ],
 	"linkConditionList": [  ],
 	"memo": "",
-	"coordList": [ [ 67, 24 ], [ 66, -24 ] ],
+	"coordList": [ [ 66, 24 ], [ 65, -24 ] ],
 	"endPointFactor": [ 743, 1963 ],
 	"visible": true,
 	"num": 0,
@@ -1538,16 +1538,10 @@
 					"id": 1,
 					"name": "Runtime Logger",
 					"filename": "plugins/001.js",
-					"srcFilename": "D:/agogpixel/pgmmv-runtime-logger-plugin-demo/assets/runtime-logger-plugin-0.2.0-dev.pgmmv.js",
+					"srcFilename": "D:/agogpixel/pgmmv-runtime-logger-plugin-demo/assets/runtime-logger-plugin-0.2.0.pgmmv.js",
 					"enabled": true,
 					"internalJson": {"jsonIndentSize":2,"jsonStringifyFunctions":false,"logFilesDirectory":"logs","logLevel":1,"writeLogFiles":false},
-					"paramValueJson": [
-    {
-        "id": 12371968,
-        "value": 1
-    }
-]
-,
+					"paramValueJson": [{"id":12371968,"value":1}],
 					"officialKey": "",
 			"folder": false
 				}
@@ -1561,6 +1555,87 @@
 	"gridMagnet": true,
 	"actionIconHide": true,
 	"memo": ""
+}
+,
+	"transitionFlow": {
+	"flowScreenList": [ {
+	"id": 1,
+	"scene": true,
+	"sceneMenuId": -1,
+	"x": 24,
+	"y": 24,
+	"width": 144,
+	"height": 48,
+	"shortcutList": [],
+	"a": -1,
+	"r": -1,
+	"g": -1,
+	"b": -1
+}, {
+	"id": 2,
+	"scene": true,
+	"sceneMenuId": 1,
+	"x": 216,
+	"y": 120,
+	"width": 144,
+	"height": 48,
+	"shortcutList": [],
+	"a": -1,
+	"r": -1,
+	"g": -1,
+	"b": -1
+} ],
+	"flowLinkList": [ {
+	"id": 1,
+	"typeIdPair": [ [0, 1, -1], [0, 2, -1] ],
+	"linkType": 0,
+	"priority": 0,
+	"startPointGroup": 0,
+	"changeConditionType": 1,
+	"noInput": true,
+	"useInput": true,
+	"inputConditionList": [  ],
+	"sceneTerminated": false,
+	"timeElapsed": false,
+	"timeElapsed300": 0,
+	"switchVariableChanged": false,
+	"switchVariableConditionList": [  ],
+	"memo": "",
+	"preMoveEffect": 0,
+	"preMoveDuration300": 300,
+	"preMoveBgmChangeType": 0,
+	"preMoveBgmFadeout": false,
+	"preMoveBgmId": -1,
+	"preMoveBgmLoop": false,
+	"preMoveBgmChangeTiming": 0,
+	"preMovePlaySe": false,
+	"preMoveSeId": -1,
+	"postMoveEffect": 0,
+	"postMoveDuration300": 300,
+	"postMoveBgmChangeType": 2,
+	"postMoveBgmFadeout": false,
+	"postMoveBgmId": -1,
+	"postMoveBgmLoop": false,
+	"postMoveBgmChangeTiming": 0,
+	"postMovePlaySe": false,
+	"postMoveSeId": -1,
+	"postMoveChangeSwitchVariable": false,
+	"postMoveSwitchVariableAssignList": [  ],
+	"postMoveExecuteObjectAction": false,
+	"postMoveObjectActionList": [  ],
+	"coordList": [ [ 143, 71 ], [ 240, 120 ] ],
+	"endPointFactor": [ -1, -1 ],
+	"visible": true,
+	"num": 0,
+	"a": -1,
+	"r": -1,
+	"g": -1,
+	"b": -1,
+	"flowLinkIdList": [  ]
+} ],
+	"flowGroupList": [  ],
+"transitionLinkPaletteList": [],
+"transitionScreenPaletteList": []
 }
 ,
 	"animParticleImageList": [  ]
