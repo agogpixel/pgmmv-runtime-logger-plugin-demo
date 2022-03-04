@@ -8,6 +8,9 @@ on:
       - 'v[0-9]+.[0-9]+.[0-9]+\+*'
 env:
   PRIVATE_REGISTRY_URL: https://npm.pkg.github.com
+  GITHUB_TOKEN: ${{ secrets.GHP_TOKEN }}
+  ITCH_IO_STAGING_URI: /repos/agogpixel/itch-io-staging/actions/workflows/fetch-pgmmv-plugin-artifacts-and-commit.yml/dispatches
+  ITCH_IO_STAGING_INPUT: '{"ref":"main","inputs":{"payload":"{\"tag\":\"${{ github.ref }}\",\"name\":\"pgmmv-runtime-logger-plugin\""}}'
 jobs:
   Build:
     name: Build
@@ -52,3 +55,13 @@ jobs:
             dist/*.pgmmv.zip
           tag: '${{ github.ref }}'
           prerelease: false
+  Update-Itch-Staging:
+    name: Update itch.io Staging
+    runs-on: ubuntu-latest
+    needs: [Prepare-Release]
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Update itch.io Staging
+        run: gh api $ITCH_IO_STAGING_URI --input - <<< $ITCH_IO_STAGING_INPUT
+        shell: bash
