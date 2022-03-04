@@ -22,7 +22,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GHP_TOKEN }}
       - name: Build
-        uses: npm run build
+        run: npm run build
         with:
           build-artifacts-name: dist
   Prepare-Release:
