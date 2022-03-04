@@ -23,11 +23,11 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GHP_TOKEN }}
       - name: Fetch Plugin
-        run: npm run fetch-plugin -- '${{ inputs.release-tag }}'
+        run: npm run fetch-plugin -- '${{ github.events.inputs.release-tag }}'
         shell: bash
       - name: Commit & Push
         run: |
           git config --global user.name 'agogbot'
           git config --global user.email 'agogbot@users.noreply.github.com'
-          git commit --allow-empty -am "[skip ci] Fetch plugin with release tag '${{ inputs.release-tag }}'."
+          git commit --allow-empty -am "[skip ci] Fetch plugin with release tag '${{ github.events.inputs.release-tag }}'."
           git push
