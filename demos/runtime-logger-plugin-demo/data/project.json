@@ -1540,7 +1540,7 @@
 					"id": 1,
 					"name": "Runtime Logger",
 					"filename": "plugins/001.js",
-					"srcFilename": "D:/agogpixel/pgmmv-runtime-logger-plugin-demo/assets/runtime-logger-plugin-0.3.0-dev.pgmmv.js",
+					"srcFilename": "D:/agogpixel/pgmmv-runtime-logger-plugin-demo/assets/runtime-logger-plugin-0.3.0.pgmmv.js",
 					"enabled": true,
 					"internalJson": {"jsonIndentSize":2,"jsonStringifyFunctions":false,"logFilesDirectory":"logs","logLevel":1,"writeLogFiles":false},
 					"paramValueJson": [
