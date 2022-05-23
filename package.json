@@ -1,9 +1,9 @@
 {
   "name": "@agogpixel/pgmmv-runtime-logger-plugin-demo",
   "description": "Runtime logger plugin demo for Pixel Game Maker MV.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "author": "kidthales <kidthales@agogpixel.com>",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/agogpixel/pgmmv-runtime-logger-plugin-demo"
@@ -21,12 +21,12 @@
   "devDependencies": {
     "@agogpixel/cavy": "~0.1.1",
     "archiver": "~5.3.1",
-    "dotenv": "~16.0.0",
-    "eslint": "~8.14.0",
+    "dotenv": "~16.0.1",
+    "eslint": "~8.16.0",
     "eslint-config-prettier": "~8.5.0",
     "eslint-plugin-prettier": "~4.0.0",
-    "husky": "~7.0.4",
-    "lint-staged": "~12.4.0",
+    "husky": "~8.0.1",
+    "lint-staged": "~12.4.1",
     "octokit": "~1.7.1",
     "prettier": "~2.6.2",
     "shx": "~0.3.4"
