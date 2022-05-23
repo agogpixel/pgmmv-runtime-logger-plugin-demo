@@ -5,6 +5,7 @@
 	"gameType": 1,
 	"playerCount": 1,
 	"mode30Fps": false,
+	"fix60FpsMode": false,
 	"tileWidth": 24,
 	"tileHeight": 24,
 	"screenWidth": 640,
@@ -20,7 +21,8 @@
 	"nxSoftResetKeyConfig": 0,
 	"nxReturnToLauncherKeyConfig": 0,
 	"nxMenuBarVisibleKeyConfig": 0,
-	"nxPlayerVersion": "1.0.5",
+	"nxSupportForSingleJoyCon": true,
+	"nxPlayerVersion": "1.0.6",
 	"gameVersion": "1.0",
 	"magnifyWindow":false,
 	"windowMagnification":2,
@@ -644,7 +646,7 @@
 	"switchList": [
 				{
 			"id": 1,
-			"name": "Reset",
+			"name": "Initialize Resources",
 			"initialValue": false,
 			"toBeSaved": true,
 			"memo": "",
@@ -652,7 +654,7 @@
 		},
 				{
 			"id": 2,
-			"name": "Reset",
+			"name": "Reset Game",
 			"initialValue": false,
 			"toBeSaved": true,
 			"memo": "",
@@ -774,7 +776,7 @@
 	"ignored": false,
 	"instanceConfigurable": false,
 	"scriptEvaluate": {
-	"script": "(function () {\n  var obj = Agtk.objectInstances.get(instanceId);\n\n  Agtk.log.info('In Waiting');\n\n  Agtk.log.debug(obj);\n\n  Agtk.log.warn('Example warn');\n  Agtk.log.error('Example error');\n  Agtk.log.fatal('Example fatal');\n})()",
+	"script": "(function () {\n  var obj = Agtk.objectInstances.get(instanceId);\n\n  Agtk.log.info('In Waiting');\n\n  Agtk.log.debug(obj);\n  Agtk.log.debug(Agtk.log.debug);\n\n  Agtk.log.warn('Example warn');\n  Agtk.log.error('Example error');\n  Agtk.log.fatal('Example fatal');\n})()",
 	"useCoffeeScript": false,
 	"javaScript": ""
 }
@@ -812,7 +814,7 @@
 	"ignored": false,
 	"instanceConfigurable": false,
 	"scriptEvaluate": {
-	"script": "(function () {\n  var obj = Agtk.objectInstances.get(instanceId);\n\n  Agtk.log.info('In Walk');\n\n  Agtk.log.debug(obj);\n\n  Agtk.log.warn('Example warn');\n  Agtk.log.error('Example error');\n  Agtk.log.fatal('Example fatal');\n})()",
+	"script": "(function () {\n  var obj = Agtk.objectInstances.get(instanceId);\n\n  Agtk.log.info('In Walk');\n\n  Agtk.log.debug(obj);\n  Agtk.log.debug(Agtk.log.debug);\n\n  Agtk.log.warn('Example warn');\n  Agtk.log.error('Example error');\n  Agtk.log.fatal('Example fatal');\n})()",
 	"useCoffeeScript": false,
 	"javaScript": ""
 }
@@ -1541,7 +1543,21 @@
 					"srcFilename": "D:/agogpixel/pgmmv-runtime-logger-plugin-demo/assets/runtime-logger-plugin-0.3.0-dev.pgmmv.js",
 					"enabled": true,
 					"internalJson": {"jsonIndentSize":2,"jsonStringifyFunctions":false,"logFilesDirectory":"logs","logLevel":1,"writeLogFiles":false},
-					"paramValueJson": [{"id":12371968,"value":1}],
+					"paramValueJson": [
+    {
+        "id": 12371968,
+        "value": 1
+    },
+    {
+        "id": 1,
+        "value": 1
+    },
+    {
+        "id": 4,
+        "value": 1
+    }
+]
+,
 					"officialKey": "",
 			"folder": false
 				}
