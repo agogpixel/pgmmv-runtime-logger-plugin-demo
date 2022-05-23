@@ -2516,7 +2516,6 @@ function removeComma(str, newline) {
 }
 //# sourceMappingURL=to-json.function.js.map
 
-
 /***/ }),
 
 /***/ "./node_modules/@agogpixel/pgmmv-resource-support/src/locks/create-resource-locks-manager.function.js":
